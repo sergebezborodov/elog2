@@ -19,6 +19,7 @@
         "yiisoft/yii2-composer": "dev-master"
     },
     "autoload": {
-        "psr-0": { "elogger\\": "./src" }
+        "psr-0": { "elogger\\": "./src" },
+        "files" : ["src/elogger/L.php"]
     }
 }
