@@ -23,6 +23,26 @@ class Console extends BaseHandler
     public $constant = 'CONSOLE_APP';
 
     /**
+     * Check is current application is console
+     *
+     * @return bool
+     */
+    protected function getIsConsoleApp()
+    {
+        if (defined($this->constant)) {
+            return true;
+        }
+
+        if (\Yii::$app instanceof \yii\console\Application) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+
+    /**
      * Write log message
      *
      * @param mixed       $message message to log
@@ -35,7 +55,7 @@ class Console extends BaseHandler
      */
     public function write($message, $target = null, $level = ELogger::TRACE, $from = null, $data = null)
     {
-        if (!defined($this->constant) || !$this->getIsLoggedLevel($level)) {
+        if (!$this->getIsConsoleApp() || !$this->getIsLoggedLevel($level)) {
             return false;
         }
 
