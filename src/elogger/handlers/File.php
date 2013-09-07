@@ -45,6 +45,11 @@ class File extends BaseHandler
     public $directoryMode = 0777;
 
     /**
+     * @var int file access permission
+     */
+    public $fileMode = 0640;
+
+    /**
      * @var array opened file instances
      */
     protected $fileResources = array();
@@ -90,8 +95,14 @@ class File extends BaseHandler
             $this->rotateFile($file);
         }
 
+        $isNewFile = !file_exists($file);
+
         if (($fp = fopen($file, 'a')) === false) {
             throw new Exception("Unable to open log file '{$file}'");
+        }
+
+        if ($isNewFile) {
+            chmod($file, $this->fileMode);
         }
 
         return $fp;
