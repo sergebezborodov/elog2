@@ -69,6 +69,10 @@ class Standart extends BaseFormater
      */
     public function format($message, $target = null, $level = ELogger::TRACE, $from = null, $data = null)
     {
+        if ($message instanceof \Exception) {
+            $message = "Exception: '{$message->getMessage()}' line {$message->getLine()} at file {$message->getFile()}";
+        }
+
         $values = array(
             '{date}'         => date($this->dateFormat),
             '{message}'      => $message,
