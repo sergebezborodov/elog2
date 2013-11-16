@@ -20,6 +20,6 @@
     },
     "autoload": {
         "psr-0": { "sergebezborodov\\": "./src" },
-        "files" : ["src/elogger/L.php"]
+        "files" : ["src/sergebezborodov/elogger/L.php"]
     }
 }
