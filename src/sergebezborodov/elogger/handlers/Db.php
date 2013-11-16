@@ -1,11 +1,11 @@
 <?php
 
 
-namespace elogger\handlers;
+namespace sergebezborodov\elogger\handlers;
 
 use Yii,
-    elogger\BaseHandler,
-    elogger\ELogger,
+    sergebezborodov\elogger\BaseHandler,
+    sergebezborodov\elogger\ELogger,
     yii\db\Connection,
     yii\base\InvalidConfigException,
     yii\db\Command;
@@ -14,7 +14,7 @@ use Yii,
 /**
  * DB handler stores log messages into databse
  *
- * @package elogger\handlers
+ * @package sergebezborodov\elogger\handlers
  */
 class Db extends BaseHandler
 {

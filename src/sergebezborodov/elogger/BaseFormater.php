@@ -1,7 +1,7 @@
 <?php
 
 
-namespace elogger;
+namespace sergebezborodov\elogger;
 
 use yii\base\Component;
 
@@ -14,8 +14,8 @@ use yii\base\Component;
 abstract class BaseFormater extends Component
 {
     public static $bultInFormater = array(
-        'default' => 'elogger\formaters\Standart',
-        'console' => 'elogger\formaters\ConsoleColor',
+        'default' => 'sergebezborodov\elogger\formaters\Standart',
+        'console' => 'sergebezborodov\elogger\formaters\ConsoleColor',
     );
 
     /**

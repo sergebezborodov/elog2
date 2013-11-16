@@ -1,11 +1,11 @@
 <?php
 
 
-namespace elogger\handlers;
+namespace sergebezborodov\elogger\handlers;
 
 
-use elogger\BaseHandler,
-    elogger\ELogger;
+use sergebezborodov\elogger\BaseHandler,
+    sergebezborodov\elogger\ELogger;
 
 /**
  * Output log messages with echo
@@ -40,6 +40,10 @@ class Console extends BaseHandler
         return false;
     }
 
+    protected function getIsLevelError($level)
+    {
+        return $level == ELogger::ERROR || $level == ELogger::FATAL;
+    }
 
 
     /**
@@ -59,7 +63,12 @@ class Console extends BaseHandler
             return false;
         }
 
-        echo $this->getFormater()->format($message, $target, $level, $from, $data) . "\r\n";
+        $stream = STDOUT;
+        if ($this->getIsLevelError($level)) {
+            $stream = STDERR;
+        }
+
+        fwrite($stream, $this->getFormater()->format($message, $target, $level, $from, $data) . "\r\n");
         return true;
     }
 }

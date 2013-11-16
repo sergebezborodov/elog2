@@ -17,7 +17,7 @@ Fast install:
 ```php
 'components' => array(
     'elog' => array(
-        'class' => 'elogger\Elogger',
+        'class' => 'sergebezborodov\elogger\Elogger',
     )
 )
 
@@ -28,7 +28,7 @@ All config params:
 ```php
 'components' => array(
     'elog' => array(
-        'class' => 'elogger\Elogger',
+        'class' => 'sergebezborodov\elogger\Elogger',
 
         // addition log levels
         'levels' => array('warning', 'fail'), // also can be 'levels' => 'warning, fail'
@@ -36,10 +36,10 @@ All config params:
         'handlers' => array(
             // file log
             array(
-                'class' => 'elogger\handlers\File',
+                'class' => 'sergebezborodov\elogger\handlers\File',
                 // log message formater
                 'formatter' => array(
-                    'class' => 'elogger\formaters\Standart',
+                    'class' => 'sergebezborodov\elogger\formaters\Standart',
                     // date format
                     'dateFormat' => 'Y-m-d H:i:s',
                     // log message format
@@ -70,10 +70,10 @@ All config params:
 
             // color console handler
             array(
-                'class' => 'elogger\formaters\ConsoleColor',
+                'class' => 'sergebezborodov\elogger\handlers\Console',
                 // log message formatter
                 'formatter' => array(
-                    'class' => 'elogger\formaters\ConsoleColor',
+                    'class' => 'sergebezborodov\elogger\formaters\ConsoleColor',
                     // date format
                     'dateFormat' => 'Y-m-d H:i:s',
                     // log message format

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace elogger\formaters;
+namespace sergebezborodov\elogger\formaters;
 
 
-use elogger\BaseFormater,
-    elogger\ELogger;
+use sergebezborodov\elogger\BaseFormater,
+    sergebezborodov\elogger\ELogger;
 
 
 /**

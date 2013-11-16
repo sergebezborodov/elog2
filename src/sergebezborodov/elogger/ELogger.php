@@ -1,7 +1,7 @@
 <?php
 
 
-namespace elogger;
+namespace sergebezborodov\elogger;
 
 use yii\base\Component,
     yii\base\InvalidConfigException;

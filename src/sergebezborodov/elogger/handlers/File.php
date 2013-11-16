@@ -1,11 +1,11 @@
 <?php
 
 
-namespace elogger\handlers;
+namespace sergebezborodov\elogger\handlers;
 
 
-use elogger\BaseHandler,
-    elogger\ELogger,
+use sergebezborodov\elogger\BaseHandler,
+    sergebezborodov\elogger\ELogger,
     yii\base\Exception,
     yii\base\InvalidConfigException;
 

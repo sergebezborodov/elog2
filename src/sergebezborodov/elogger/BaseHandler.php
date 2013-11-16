@@ -1,17 +1,16 @@
 <?php
 
 
-namespace elogger;
+namespace sergebezborodov\elogger;
 
-use elogger\ELogger,
-    yii\base\Component,
+use yii\base\Component,
     yii\base\InvalidConfigException;
 
 abstract class BaseHandler extends Component
 {
     public static $bultInHandlers = array(
-        'file'    => 'elogger\handlers\File',
-        'console' => 'elogger\handlers\Console',
+        'file'    => 'sergebezborodov\elogger\handlers\File',
+        'console' => 'sergebezborodov\elogger\handlers\Console',
     );
 
     /**

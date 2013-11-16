@@ -1,6 +1,6 @@
 <?php
 
-use elogger\ELogger;
+use sergebezborodov\elogger\ELogger;
 
 /**
  * Shortcut interface for logger
@@ -12,7 +12,7 @@ class L
 
     /**
      * @static
-     * @return \elogger\ELogger
+     * @return \sergebezborodov\elogger\ELogger
      */
     protected static function getLogger()
     {

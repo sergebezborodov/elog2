@@ -1,9 +1,9 @@
 <?php
 
 
-namespace elogger\formaters;
+namespace sergebezborodov\elogger\formaters;
 
-use elogger\ELogger;
+use sergebezborodov\elogger\ELogger;
 
 /**
  * Formatter for *nix console with colors
