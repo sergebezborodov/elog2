@@ -16,7 +16,7 @@ class L
      */
     protected static function getLogger()
     {
-        return \Yii::$app->getComponent(self::$component);
+        return \Yii::$app->get(self::$component);
     }
 
     /**
