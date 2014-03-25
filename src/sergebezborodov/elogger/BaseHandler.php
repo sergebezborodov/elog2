@@ -99,7 +99,7 @@ abstract class BaseHandler extends Component
             }
             $config = array('class' => BaseFormater::$bultInFormater[$config]);
         }
-        $formater = \Yii::createObject($config, $this);
+        $formater = \Yii::createObject($config, [$this]);
         $formater->init();
         return $formater;
     }

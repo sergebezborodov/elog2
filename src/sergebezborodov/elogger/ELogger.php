@@ -100,7 +100,7 @@ class ELogger extends Component
             }
             $config = array('class' => BaseHandler::$bultInHandlers[$config]);
         }
-        $handler = \Yii::createObject($config, $this);
+        $handler = \Yii::createObject($config, [$this]);
         $handler->init();
         return $handler;
     }
